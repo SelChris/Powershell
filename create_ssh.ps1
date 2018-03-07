@@ -3,8 +3,8 @@ $ip = Read-Host 'Whats the IP'
 $image = Read-Host 'Whats the name of your Putty image'
 $name = Read-Host 'What is your username?'
 $pass = Read-Host 'What is your password?' -AsSecureString
-$cdssh = cd 'C:\Program Files\PuTTY'									                            #pfad zu putty !!!ANPASSEN!!!
-$openssh = putty.exe -load $image -pw $pass								                        #pw withd nicht richtig angegeben
+$cdssh = cd 'C:\Program Files\PuTTY'									               #pfad zu putty !!!ANPASSEN!!!
+$openssh = putty.exe -load $image -pw $pass							             #pw withd nicht richtig angegeben
 
 New-Item "P:\VM-Skripts\New_VM\$vmname" -type directory                           #Wo sollen die Ordner angelegt werden?
 New-Item "P:\VM-Skripts\New_VM\$vmname\ssh.ps1" -type file                        #unterverzeichniss des Ordners
