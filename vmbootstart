@@ -1,3 +1,3 @@
 cd "C:\Program Files\Oracle\VirtualBox\"          
-./VBoxManage.exe startvm "$vm-name$" --type headless      ##start virtualbox-vm headless
-for($i=1; $i -le 10; $i++){if (Test-Connection ("127.0.0.1") -ErrorAction SilentlyContinue){cd "C:\Program Files\PuTTY\"; ./putty.exe -load "vm-cs" ; break} else {}}   ##test-connection to vm and start putty ssh shell
+./VBoxManage.exe startvm "$VM-Name$" --type headless      ##start virtualbox-vm headless
+for($i=1; $i -le 10; $i++){if (Test-Connection ("$IP$") -ErrorAction SilentlyContinue){cd "C:\Program Files\PuTTY\"; ./putty.exe -load "$VM-Name$" ; break} else {}}   ##test-connection to vm and start putty ssh shell
